@@ -105,6 +105,10 @@ type ClientOptions struct {
 	// TLSTrustAnchor, if non-nil, designates an explicit trust anchor to use for the
 	// TLS session to the EST server.
 	TLSTrustAnchor *x509.Certificate
+
+	// TLSTrustAnchorPool, if non-nil, designates an explicit trust anchor pool to use for the
+	// TLS session to the EST server.
+	TLSTrustAnchorPool *x509.CertPool
 }
 
 // NewEstClient creates a apiclient that communicates with the given host.

@@ -64,6 +64,7 @@ func (s swaggerAPIBuilder) Build(currentKey crypto.PrivateKey, currentCert *x509
 	o := httptransport.TLSClientOptions{
 		InsecureSkipVerify: s.options.InsecureSkipVerify,
 		LoadedCA:           s.options.TLSTrustAnchor,
+		LoadedCAPool:       s.options.TLSTrustAnchorPool,
 	}
 
 	if currentKey != nil && currentCert != nil {
